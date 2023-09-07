@@ -129,6 +129,18 @@ body{
     left:-123px;
 
 }
+
+.play_2_image img{
+    position: relative;
+    bottom:240px;
+    left:240px; 
+}
+.play_content .play_content2_h4{
+    text-align: left; 
+}
+.play_content .play_content2_p{
+    text-align: left; 
+}
 /* play Instantly section end */
 
 
