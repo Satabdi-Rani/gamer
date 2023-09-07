@@ -6,6 +6,7 @@ body{
     padding:0;
 }
 .btn_primary{
+    border:0;
     padding: 10px 20px;
     display: inline-flex;
     align-items: flex-start;
@@ -81,34 +82,30 @@ body{
 /* Header styles end */
 /* Banner section start */
 .banner_section{
-   overflow: hidden;
+   /* overflow: hidden; */
    background-color: #ebb1cf3d;
+   padding: 100px 0;
 }
 .banner_container{
-    max-width: 80%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    margin: 100px auto;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* margin: 100px auto; */
+    
 }
 .banner_text_container{
     /* text-align: center; */
 }
 .banner_text_container h2{
     color: #0B0223;
-    /* text-align: center; */
-    font-family: Work Sans;
     font-size: 38px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     text-transform: uppercase;
 }
 .banner_text_container h1{
-    /* text-align: center; */
     font-size: 95px;
-    font-style: normal;
     font-weight: 800;
-    line-height: normal;
     text-transform: uppercase;
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
@@ -137,7 +134,7 @@ body{
     max-width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 /* .gamer{
     max-width: 80%;
@@ -149,6 +146,7 @@ body{
     height: 489px;
 }
 .gamer_content{
+    width: 50%;
     margin-top: 100px;
     text-align: right;
 }
@@ -207,8 +205,11 @@ body{
 }
 
 .videos_section{
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
+    margin:100px 0 140px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     /* gap:30px;  */
 }
 .funny_image1 img, .funny_image2 img, .funny_image3 img, .funny_image4 img{
@@ -223,7 +224,7 @@ body{
 }
 .play_instantly{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap:130px;
     max-width: 80%;
     margin: 0 auto;  
@@ -281,11 +282,12 @@ body{
 }
 .career_content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 80%;
     margin: 0 auto;  
 }
 .careers{
+    width:50%;
     color: #FFF;
     text-align: left;
     padding:100px 0;
@@ -302,6 +304,7 @@ body{
     margin:20px 0;
 }
 .careers button{
+    border:0;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
@@ -310,8 +313,12 @@ body{
     background: #FFF;
     color:rgb(226, 43, 180)
 }
+.careers_img{
+    /* width:50%; */
+}
 .careers_img img{
     max-width: 500px;
+
 }
 /* Career Section end */
 
@@ -418,15 +425,67 @@ body{
 /* ======================================================== */
 @media screen and (max-width:576px) {
     /* header part */
-    .nav, .menulist, .play_instantly{
+    .nav, .menulist, .play_instantly, .banner_container{
         flex-direction: column;
     }
     .logo{
         justify-content: center;
     }
+    .menulist{
+        margin-top: 20px;
+    }
+    .menu_social{
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .follow{
+        font-size: 14px;
+    }
     /* header part end */
+    /* Banner start */
+    .banner_section{
+        background-color: #fff;
+        padding: 0;
+     }
+    .banner_container{
+       width:100%;
+       flex-direction: column-reverse;
+       justify-content: center;
+       align-items: center;
+    }
+    .banner_text_container{
+        margin-top:50px;
+    }
+    .banner_text_container h1{
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
+    /* Gamer section start */
+    .gamer_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .gamer_img img{
+        width: 500px;
+        height: 300px;
+    }
+    .gamer_content{
+        width:100%;
+        text-align: center;
+    }
+    /* video section */
+    .videos_section{
+       grid-template-columns: repeat(1, 1fr);
+       text-align: center;
+    }
+    
 
     /* play section start */
+    .play_instantly{
+        flex-direction: column;
+        justify-content: center;
+    }
     .play_content h4{
         text-align: center;
         font-size: 38px;
@@ -436,10 +495,23 @@ body{
         text-align: center;
         font-size: 16px;
         line-height: 20px;
-        
+    }
+    .image1 img{
+        width: 300px;
+        height: 300px;
+        text-align: center;
     }
     /* play section end */
-
+    /* Careers start */
+    .career_content{
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
+    .careers{
+        width:100%;
+        text-align: center;
+    }
     /* Button start */
     .button_container{
         grid-template-columns: repeat(3, 1fr);
@@ -455,11 +527,27 @@ body{
     /* Button end */
 
     /* Footer start */
-     
+    .menulist_ul li a, .terms_privacy_ul li a{ 
+      font-size: 12px;
+    }
+    .social_menu{
+        gap: 10px;
+    }
+    .social_menu li i{
+        font-size: 20px;
+    }
+    .terms_privacy_ul{
+        gap: 10px;
+        /* margin: 40px 0; */
+    }
+    .copyright{
+        font-size: 10px;
+    }
     /* Footer end */
 }
 
-@media screen and (min-width:576px) and (max-width:972px) {
+/* ================================================================= */
+@media screen and (min-width:576px) and (max-width:992px) {
     /* header part start */
     .nav, .menulist, .play_instantly{
         flex-direction: column;
@@ -468,4 +556,22 @@ body{
         justify-content: center;
     }
     /* header part end */
+    /* Banner start */
+    .banner_section{
+        background-color: #fff;
+        padding: 0;
+     }
+    .banner_container{
+       /* width:100%; */
+       flex-direction: column-reverse;
+       justify-content: center;
+       align-items: center;
+    }
+    .banner_text_container{
+        margin-top:50px;
+    }
+    .banner_text_container h1{
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
 }
